@@ -1,0 +1,74 @@
+body {
+    font: 14px/1.5 'Arial',sans-serif;
+}
+a, a:hover, a:active, a:focus, a:visited{
+    text-decoration: none;
+    color: #08c;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+@linkPaddingLeft: 6px;
+
+.container {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    zoom: 1;
+    .glist {
+	margin-left: -20px;
+	zoom: 1;
+	overflow: hidden;
+	.wrapper {
+	    float: left;
+	    display: inline;
+	    width: 180px;
+	    margin-left: 20px;
+	    .section {
+		.header {
+		    padding: 5px 0;
+		    margin-bottom: 10px;
+		    border-bottom: 2px solid #23cbb4;
+		    background: #f7f7f7;
+		    h3 {
+			display: inline-block;
+			_float: left;
+			zoom: 1;
+			margin-bottom: 0;
+			margin-top: 0;
+			margin-right: 10px;
+			font-size: 14px;
+			a {
+			    padding-left: @linkPaddingLeft;
+			}
+		    }
+		    span {
+			    color: #999;
+			    font-size: 12px;
+			}
+		}
+		.list {
+		    a {
+			display: inline-block;
+			box-sizing: border-box;
+			_width: 80px; // fire haslayout for ie6
+			min-width: 80px; // could fire haslayout for ie7
+			margin: 5px 0;
+			padding-left: @linkPaddingLeft;
+			color: #555;
+			white-space: nowrap;
+			&:hover {
+			    color: #08c;
+			}
+		    }
+		    hr {
+			border: 1px dotted #ddd;
+			border-width: 1px 0 0 0;;
+			height: 1px;
+		    }
+		}
+	    }
+	}
+    }
+}
